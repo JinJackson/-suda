@@ -1,0 +1,29 @@
+\begin{table}
+    \caption{模型性能对比}
+    \centering
+    \newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+    \begin{tabular}{l|c|c}
+    \toprule[0.7pt]
+    \textbf{模型\qquad\qquad\qquad\qquad\ } & \textbf{\enspace MAP (\%)\enspace} & \textbf{\enspace MRR (\%)\enspace  } \\
+    \midrule[0.7pt]
+
+    BM25 & 53.73 & 62.58 \\
+    TF-IDF & 39.92 & 46.38 \\
+    \midrule[0.4pt]
+    Att-BiLSTM & 47.04 & 54.36 \\
+    AP-BiLSTM & 46.98 & 55.20 \\
+    LW-BiLSTM & 47.56 & 54.33 \\
+    CA-Wang & 48.71 & 56.11 \\
+    COALA & 60.58 & 69.40 \\
+    MICRON & 63.00 & 71.03 \\
+    BERT-PR & 73.55 & 80.87 \\
+    BERTlets & 73.60 & 81.00 \\
+    \midrule[0.4pt]
+    BERT（baseline） & 73.70 & 81.02 \\
+    BERT-IIN & 74.02 & 81.33 \\
+    BERT-MIIN & 74.84 & 82.04 \\
+    \textbf{BERT-MIIN$_{sent2}$} & \textbf{75.20} & \textbf{82.21} \\
+    \bottomrule[0.7pt]
+    \end{tabular}
+    \label{table3-2}
+\end{table}

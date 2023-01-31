@@ -1,0 +1,24 @@
+\begin{table}
+    \caption{DDA数据增强试验结果}
+    \centering
+    \newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+    \begin{tabular}{l|l|cc|c|c}
+    \toprule[0.7pt]
+    \multirow{2}{*}{\textbf{模型}} & \multirow{2}{*}{\enspace \textbf{训练数据\enspace }} & \multicolumn{2}{c|}{\textbf{LCQMC}} & \;\textbf{LCQMC$_{DDA}$}\; & \;\textbf{CQM$_{robust}$}\; \\
+    \cline{3-6}
+    & & \enspace Dev\; & \; Test\enspace & Test & Test\\
+    \midrule[0.7pt]
+
+    \multirow{3}{*}{BERT$_{base}$} & \enspace LCQMC & 89.1 & 86.5 & 83.5 & 71.6 \\\cline{2-6}
+    &\enspace + DDA$_{noise}$ & 84.7 & 83.4 & 77.4 & 70.6 \\
+    &\enspace \textbf{+ DDA} & \textbf{90.2} & \textbf{87.7} & \textbf{86.9} & \textbf{74.4} \\
+    \midrule[0.4pt]
+    \multirow{2}{*}{RoBERTa$_{large}$} & \enspace LCQMC & 90.5 & 88.0 & 84.6 & 75.9 \\
+    &\enspace \textbf{+ DDA} & \textbf{90.9} & \textbf{88.6} & \textbf{87.2} & \textbf{77.8} \\
+    \midrule[0.4pt]
+    \multirow{2}{*}{MacBERT$_{large}$\quad} & \enspace LCQMC & 90.9 & 88.2 & 84.6 & 78.0 \\
+    &\enspace \textbf{+ DDA} & \textbf{91.2} & \textbf{89.5} & \textbf{87.0} & \textbf{79.2} \\
+    \bottomrule[0.7pt]
+    \end{tabular}
+    \label{table4-3}
+\end{table}

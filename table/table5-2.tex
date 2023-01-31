@@ -1,0 +1,400 @@
+% 表： CQM\textsubscript{robust}数据集统计
+\begin{table}[!h]
+    \caption{CQM\textsubscript{robust}评估体系及基线模型评估结果}
+    % \tiny
+    \centering
+    \newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+    \resizebox{155mm}{108mm}
+    {
+    \small
+    %\begin{adjustbox}{max width=\textwidth}
+    \begin{tabular}{c|c|c|c|cccccc|l}
+    \toprule[0.7pt]
+    %  \textbf{ \tabincell{c}{Coarse-grained\\ Categories}} & \textbf{\tabincell{c}{Fine-grained\\ Categories}} & \textbf{\tabincell{c}{Perturbation\\ Operations}} & \textbf{Examples and Translation} & \textbf{Label} & \textbf{\#Y / \#N} \\
+      \textbf{ \tabincell{c}{类别}} & \textbf{\tabincell{c}{子类}} & \textbf{\tabincell{c}{扰动\\操作}} & {\tabincell{c}{\textbf{标签} \\ \#1 / \#0}} &{ \tabincell{c}{BERT\\base}}&{ \tabincell{c}{ERNIE\\base}} & { \tabincell{c}{RoBERTa\\base}}&{ \tabincell{c}{MacBERT\\base}}&{ \tabincell{c}{RoBERTa\\large}}&{ \tabincell{c}{MacBERT\\large}}& \tabincell{c}{样例及翻译} \\
+    \midrule[0.7pt]
+    
+    % Lexical
+    
+    % basic
+    \multirow{55}*{{\rotatebox{90}{\textbf{词法}}}} & \multirow{22}*{\tabincell{c}{基础\\词汇}} & 插入名词 &
+     -/539
+    &
+    41.4±3.4 & 40.8±2.1 & \underline{43.0±0.7} & 41.4±2.5 & \textbf{45.4±4.1} & 37.3±2.4 &
+     \tabincell{l}{\textbf{E1}: \label{example:E1}鸡蛋怎么炒好吃\;/\; 鸡蛋\colorbox{lightgreen}{\color{darkgreen}面}怎么炒好吃 \\
+    \quad\;\;\, how to fry eggs\;/\; how to fry egg 
+     \colorbox{lightgreen}{\color{darkgreen}noodles}}
+     \\\cline{3-11}
+    
+     & & 插入动词& 
+     -/131
+     &
+     \underline{39.4±0.4} & 33.8±2.6 & 37.4±2.0 & 35.9±2.7 & \textbf{39.9±3.1} & 29.5±3.8 &
+     \tabincell{l}{\specialrule{0em}{0em}{1mm}\textbf{E2}: \label{example:E2}伤口用什么好\;/\; 伤口用什么\colorbox{lightgreen}{\color{darkgreen}消毒}好\\
+    \quad\;\;\,what is good for the wound\;/\; how to \colorbox{lightgreen}{\color{darkgreen}disinfect} the wound
+    }
+    \\\cline{3-11}
+    
+     & & 插入形容词 & 
+     -/458
+     &
+     23.5±1.9 & 19.2±3.7 & \textbf{26.9±4.4} & \underline{23.9±4.2} & 18.1±2.4 & 10.4±2.1 &
+     \tabincell{l}{\specialrule{0em}{0em}{1mm}\textbf{E3}: \label{example:E3}有哪些类型的app\;/\; 有哪些类型的\colorbox{lightgreen}{\color{darkgreen}移动}app\\
+     \quad\;\;\,what are types of apps\;/\; what are types of \colorbox{lightgreen}{\color{darkgreen}mobile} apps
+    }
+    \\\cline{3-11}
+    
+     & & 插入副词& 
+      -/302
+     &
+     3.7±0.5 & 4.2±0.5 & 3.8±0.6 & \underline{4.4±1.2} & \textbf{5.8±1.5} & 3.1±1.1 &
+     \tabincell{l}{\specialrule{0em}{0em}{1mm}\textbf{E4}: \label{example:E4}为什么打嗝\;/\; 为什么\colorbox{lightgreen}{\color{darkgreen}老}打嗝\\
+     \quad\;\;\,why burp\;/\; why \colorbox{lightgreen}{\color{darkgreen}always} burp
+    }
+    \\\cline{3-11}
+    
+    %/v./adj./adv. 
+     & & 替换名词 & 
+      -/702
+     &
+     86.6±0.3 & 86.7±0.1 & 88.3±0.3 & \underline{88.8±1.2} & \textbf{89.4±1.6} &  87.8±0.7&
+     \tabincell{l}{\specialrule{0em}{0em}{1mm}\textbf{E5}: \label{example:E5}申请美国\colorbox{lightred}{\color{darkred}绿卡}流程\;/\; 申请美国\colorbox{lightgreen}{\color{darkgreen}签证}流程\\
+    \quad\;\;\,U.S. \colorbox{lightred}{\color{darkred}green card} application process\;/\; U.S.  \colorbox{lightgreen}{\color{darkgreen}visa} application process
+    }
+    \\\cline{3-11}
+    
+     & & 替换动词& 
+      -/466
+     &
+     71.7±1.1 &77.6±0.8 & 76.9±0.4 & 76.5±1.2 & \underline{81.0±1.6} & \textbf{81.5±2.2} &
+     \tabincell{l}{\specialrule{0em}{0em}{1mm}\textbf{E6}: \label{example:E6}为什么\colorbox{lightred}{\color{darkred}下蹲}膝盖疼\;/\; 为什么\colorbox{lightgreen}{\color{darkgreen}下跪}膝盖疼\\
+     \quad\;\;\,why knee pain when \colorbox{lightred}{\color{darkred}squatting}\;/\; why knee pain when \colorbox{lightgreen}{\color{darkgreen}kneeling}
+    }
+    \\\cline{3-11}
+    
+     & & 替换形容词 & 
+      -/472
+     &
+     74.3±2.1 & 80.0±1.0 & 77.6±0.7 & 81.6±0.5 & \textbf{82.7±1.1} & \underline{82.7±1.6} &
+     \tabincell{l}{\specialrule{0em}{0em}{1mm}\textbf{E7}: \label{example:E7}耳朵出血\colorbox{lightred}{\color{darkred}严重}吗\;/\; 耳朵出血\colorbox{lightgreen}{\color{darkgreen}正常}吗\\
+     \quad\;\;\,is the ear bleeding \colorbox{lightred}{\color{darkred}serious}\;/\; is the ear bleeding \colorbox{lightgreen}{\color{darkgreen}normal}
+    }
+    \\\cline{3-11}
+    
+    & & 替换副词& 
+     -/188
+    &
+    19.1±6.1 & 19.3±4.4 & 16.3±3.8 & 23.9±4.6 & \textbf{59.0±4.0} & \underline{56.2±2.0} &
+     \tabincell{l}{\specialrule{0em}{0em}{1mm}\textbf{E8}: \label{example:E8}为什么会\colorbox{lightred}{\color{darkred}经常}头晕\;/\; 为什么会\colorbox{lightgreen}{\color{darkgreen}有点}头晕\\
+     \quad\;\;\,why \colorbox{lightred}{\color{darkred}regularly} feel dizzy\;/\; why  \colorbox{lightgreen}{\color{darkgreen}slightly} feel dizzy
+    }
+    \\\cline{3-11}
+    
+     & & 替换数词&  
+      -/1116
+     &
+     83.2±1.4 & \underline{91.4±0.4} & 85.9±1.8 & 87.2±0.9 & 88.1±0.5 & \textbf{91.9±1.1} &
+     \tabincell{l}{\specialrule{0em}{0em}{1mm}\textbf{E9}: \label{example:E9}血压\colorbox{lightred}{\color{darkred}130}/100高吗\;/\;
+     血压\colorbox{lightgreen}{\color{darkgreen}120}/100高吗\\
+     \quad\;\;\,is blood pressure \colorbox{lightred}{\color{darkred}130}/100 high \;/\; is blood pressure \colorbox{lightgreen}{\color{darkgreen}120}/100 high}
+    \\\cline{3-11}
+    
+     & & 替换量词&  
+      -/22
+     &
+     {30.3±6.9} & 25.7±5.2 & 33.3±2.6 & \textbf{34.9±2.6} & 27.3±0.0 & \underline{34.8±10.5} &
+     \tabincell{l}{\specialrule{0em}{0em}{1mm}\textbf{E10}: \label{example:E10}一\colorbox{lightred}{\color{darkred}束}花多少钱\;/\;
+     一\colorbox{lightgreen}{\color{darkgreen}枝}花多少钱\\
+     \qquad\, how much is \colorbox{lightred}{\color{darkred}a bunch of} flower \;/\; how much is  \colorbox{lightgreen}{\color{darkgreen}a}flower}
+    \\\cline{3-11}
+    
+     & & 替换词组 &   
+      -/197
+     &
+     \underline{98.0±0.0} & \textbf{98.1±0.2} & 96.6±0.3 & 97.8±0.5 & 97.8±0.2 & 97.5±0 &
+     \tabincell{l}{\specialrule{0em}{0em}{1mm}\textbf{E11}: \label{example:E11}如何\colorbox{lightred}{\color{darkred}提高自己的记忆力}\;/\; 如何\colorbox{lightgreen}{\color{darkgreen}增加自己的实力}\\
+     \qquad\, how to \colorbox{lightred}{\color{darkred}improve my memory}\;/\; how to \colorbox{lightgreen}{\color{darkgreen}increase my strength}
+     }
+    
+    \\\cline{2-11}
+    
+    % ner
+     & \multirow{8}*{\tabincell{c}{命名\\实体}} & 替换地点 & 
+      -/458
+     &
+     \textbf{96.0±0.6} & \underline{95.7±0.2} & 95.4±0.4 & 95.0±0.4 & 94.7±0.4&94.5±0.5 &
+     \tabincell{l}{\specialrule{0em}{0em}{1mm}\textbf{E12}: \label{example:E12}\colorbox{lightred}{\color{darkred}山西}春节习俗 \;/\;\colorbox{lightgreen}{\color{darkgreen}陕西}春节习俗 \\
+     \qquad\, \colorbox{lightred}{\color{darkred}Shanxi} spring festival customs\;/\; \colorbox{lightgreen}{\color{darkgreen}Shannxi} spring festival customs}
+    \\\cline{3-11}
+    
+     &  & 替换机构 &  
+      -/264
+     &
+     \textbf{94.9±0.2} & \underline{94.3±0.6} & 91.2±1.4 & 93.4±0.7 & 93.5±0.3 & 93.8±0.1 &
+      \tabincell{l}{\specialrule{0em}{0em}{1mm}
+      \textbf{E13}: \label{example:E13}\colorbox{lightred}{\color{darkred}北京邮电大学}附近酒店 \;/\; \colorbox{lightgreen}{\color{darkgreen}南京邮电大学}附近酒店\\
+     \qquad\, hotels near \colorbox{lightred}{\color{darkred}BUPT}\;/\; hotels near \colorbox{lightgreen}{\color{darkgreen}NJUPT}}
+    \\\cline{3-11}
+     
+     &  & 替换人物 &  
+      -/468
+     &
+     90.3±1.3 & 91.0±0.9  & 88.7±1.6 & 91.4±1.6 & \underline{92.3±1.3}& \textbf{93.2±1.1} &
+      \tabincell{l}{\specialrule{0em}{0em}{1mm}
+      \textbf{E14}: \label{example:E14}\colorbox{lightred}{\color{darkred}陈龙}的妻子 \;/\; \colorbox{lightgreen}{\color{darkgreen}成龙}的妻子\\
+     \qquad\, wife of \colorbox{lightred}{\color{darkred}Long Chen}\;/\; wife of \colorbox{lightgreen}{\color{darkgreen}Jackie Chan}}
+    \\\cline{3-11}
+     
+     &  & 替换物品 &  
+      -/170
+     &
+     83.7±2.6 &\underline{88.2±2.1} & 82.4±6.9 & 83.3±0.3 & 86.0±1.7 & \textbf{88.8±4.4} &
+      \tabincell{l}{\specialrule{0em}{0em}{1mm}
+      \textbf{E15}: \label{example:E15}\colorbox{lightred}{\color{darkred}iphone 6}多少钱 \;/\; \colorbox{lightgreen}{\color{darkgreen}iphone6x}多少钱\\
+     \qquad\, how much is \colorbox{lightred}{\color{darkred}iphone 6}\;/\; how much is \colorbox{lightgreen}{\color{darkgreen}iphone6x}}
+    \\\cline{2-11}
+     
+    % synonym
+     & \multirow{8}*{同义词} & 替换名词 &  
+      405/-
+     &
+     51.1±1.1 & 59.7±1.3 & 59.7±2.2 & 60.7±2.0 & \underline{63.3±3.1} &\textbf{71.6±4.0} & 
+     \tabincell{l}{\specialrule{0em}{0em}{1mm}
+     \textbf{E16}: \label{example:E16}\colorbox{lightred}{\color{darkred}猕猴桃}的功效 \;/\;
+      \colorbox{lightgreen}{\color{darkgreen}奇异果}的功效\\
+    \qquad\, health benefits of \colorbox{lightred}{\color{darkred}Chinese gooseberry}\;/\;
+    health benefits of \colorbox{lightgreen}{\color{darkgreen}Kiwi}}
+    \\\cline{3-11}
+    
+     &  & 替换动词 &  
+      372/-
+     &
+     80.0±0.9& 81.1±1.6 & 82.5±0.0 & 83.2±1.2 & \underline{84.0±2.0} & \textbf{88.1±1.4} &
+      \tabincell{l}{\specialrule{0em}{0em}{1mm}
+      \textbf{E17}: \label{example:E17}什么果汁可以\colorbox{lightred}{\color{darkred}减肥} \;/\; 什么果汁可以\colorbox{lightgreen}{\color{darkgreen}减重}\\
+     \qquad\, what juice can \colorbox{lightred}{\color{darkred}lose weight}\;/\; what juice can \colorbox{lightgreen}{\color{darkgreen}slim}}
+    \\\cline{3-11}
+     
+     &  & 替换形容词 &  
+      453/-
+     &
+     75.7±1.3 & 77.3±1.1 & 78.8±2.5 & 74.8±0.5 & \underline{79.4±3.4} & \textbf{88.5±1.3} &
+      \tabincell{l}{\specialrule{0em}{0em}{1mm}
+      \textbf{E18}: \label{example:E18}\colorbox{lightred}{\color{darkred}有趣}搞笑的广告词 \;/\; \colorbox{lightgreen}{\color{darkgreen}幽默}搞笑的广告词\\
+     \qquad\, \colorbox{lightred}{\color{darkred}funny} advertising words\;/\; \colorbox{lightgreen}{\color{darkgreen}humerous} advertising words}
+    \\\cline{3-11}
+     
+     &  & 替换副词 &  
+      26/-
+     &
+     \underline{98.7±2.1} & \textbf{100.0±0.0} & \textbf{100.0±0.0} & \textbf{100.0±0.0} &\textbf{100±0.0} &\textbf{100.0±0.0} & 
+      \tabincell{l}{\specialrule{0em}{0em}{1mm}
+      \textbf{E19}: \label{example:E19}\colorbox{lightred}{\color{darkred}总是}想睡觉是为什么 \;/\; \colorbox{lightgreen}{\color{darkgreen}老是}想睡觉是为什么\\
+     \qquad\, why \colorbox{lightred}{\color{darkred}always} want to sleep \;/\; why \colorbox{lightgreen}{\color{darkgreen}repeatedly} want to sleep}
+    \\\cline{2-11}
+    
+    % Antonym
+     & 反义词 & 替换形容词 & 
+      -/305
+     &
+     50.6±3.4 &69.6±2.9 & 65.0±1.5 & 73.1±4.3 &\textbf{91.7±2.3} &\underline{90.7±2.3} & 
+      \tabincell{l}{\specialrule{0em}{0em}{1mm}
+      \textbf{E20}: \label{example:E20}什么水果脂肪\colorbox{lightred}{\color{darkred}低} \;/\; 
+      什么水果脂肪\colorbox{lightgreen}{\color{darkgreen}高}\\
+      \qquad\, what fruit is  \colorbox{lightred}{\color{darkred}low} in fat\;/\;
+      what fruit is \colorbox{lightgreen}{\color{darkgreen}high} in fat
+      }
+      
+    \\\cline{2-11}
+    % negation
+    
+     & \multirow{6}*{否定} & 否定动词 &  
+      -/153
+     &
+     69.9±9.6 & 88.9±1.3 & 84.8±2.9 & \textbf{93.3±1.3} & 88.4±0.9 & \underline{91.4±3.4} & 
+     \tabincell{l}{\specialrule{0em}{0em}{1mm}
+     \textbf{E21}: \label{example:E21}为什么宝宝哭\;/\; 为什么宝宝\colorbox{lightgreen}{\color{darkgreen}不}哭 \\
+     \qquad\, why baby cries\;/\; why baby \colorbox{lightgreen}{\color{darkgreen}doesn't} cry
+     }
+    \\\cline{3-11}
+     &  & 否定形容词 &  
+      -/139
+     &
+     73.1±8.5 & 84.2±1.2 & 82.7±1.4 & \underline{88.0±1.5} & 88.0±2.9 & \textbf{89.4±1.0} & 
+      \tabincell{l}{\specialrule{0em}{0em}{1mm}
+    \textbf{E22}: \label{example:E22}为什么苹果是红的\;/\; 为什么苹果\colorbox{lightgreen}{\color{darkgreen}不是}红的 \\
+     \qquad\, why apple is red\;/\; why apple is \colorbox{lightgreen}{\color{darkgreen}not} red }
+    \\\cline{3-11}
+     
+     &  & 否定反义词 & 
+      59/-
+     &
+     29.9±2.5 & 34.4±2.5 & 39.0±1.7 & 31.1±2.5 & \underline{40.7±1.7} & \textbf{53.6±0.9} & 
+     \tabincell{l}{\specialrule{0em}{0em}{1mm}
+     \textbf{E23}: \label{example:E23}\colorbox{lightred}{\color{darkred}激动}怎么办\;/\; \colorbox{lightgreen}{\color{darkgreen}无法}\colorbox{lightgreen}{\color{darkgreen}平静}怎么办 \\
+    \qquad\, what to do if too \colorbox{lightred}{\color{darkred}excited}\;/\; what to do if \colorbox{lightgreen}{\color{darkgreen}can't}\colorbox{lightgreen}{\color{darkgreen}calm down}
+     }
+     
+    \\\cline{2-11}
+    
+    % tense
+     & \multirow{4}*{{\tabincell{c}{时态}}} & 插入时间词 & 
+      -/120
+     &
+     26.6±2.1 & 29.1±2.1 & 33.1±0.9 & \underline{41.7±3.3} & \textbf{47.5±5.4} & 33.6±8.5  &
+     \tabincell{l}{\specialrule{0em}{0em}{1mm}
+     \textbf{E24}: \label{example:E24}北京会下雨吗\;/\; 北京\colorbox{lightgreen}{\color{darkgreen}明天}会下雨吗 \\
+     \qquad\, will it rain in Beijing\;/\; will it rain in Beijing\colorbox{lightgreen}{\color{darkgreen}tomorrow}
+     }
+     \\\cline{3-11}
+     & & 替换时间词 & 
+      -/114
+     &
+     44.1±6.1 & 67.8±2.6 & 55.0±0.5 & 53.8±1.3 & \underline{70.4±6.1} & \textbf{78.6±5.8} &
+     \tabincell{l}{\specialrule{0em}{0em}{1mm}
+    \textbf{E25}: \label{example:E25}\colorbox{lightred}{\color{darkred}昨天}下雪\colorbox{lightred}{\color{darkred}了}吗\;/\; \colorbox{lightgreen}{\color{darkgreen}明儿}会下雪吗 \\
+    \qquad\, was it \colorbox{lightred}{\color{darkred}snow} yesterday\;/\; will it \colorbox{lightgreen}{\color{darkgreen}snow} tomorrow
+     }
+    %  \\\cline{2-11}
+    % \specialrule{0em}{0em}{2mm}
+    %  &\multicolumn{2}{c|}{\textbf{Micro / Macro Acc}}&67.2 / 61.4 & 71.0 / 65.5  & \underline{74.1} / \underline{70.2}  & \textbf{74.4} / \textbf{70.7} & \tabincell{l}{-}
+    
+     \\\midrule[0.7pt]
+     
+    % Syntactic
+    \multirow{8}*{{\rotatebox{90}{\textbf{句法}}}}
+     & 对称角色 & 交换 & 
+      533/-
+     &
+     \underline{97.3±0.4} & \textbf{98.0±0.1} & 95.2±1.7 & 95.9±0.7 & 93.3±0.9 & 92.5±1.9  &
+     \tabincell{l}{\textbf{E26}: \label{example:E26}\colorbox{lightred}{
+    \color{darkred}鱼}和\colorbox{lightred}{\color{darkred}鸡蛋}能一起吃吗\;/\; 
+      \colorbox{lightgreen}{\color{darkgreen}鸡蛋}和\colorbox{lightgreen}{\color{darkgreen}鱼}能一起吃吗\\
+      \qquad\, can I eat \colorbox{lightred}{\color{darkred}fish} with \colorbox{lightred}{\color{darkred}egg}\;/\; can I eat \colorbox{lightgreen}{\color{darkgreen}egg} with \colorbox{lightgreen}{\color{darkgreen}fish}
+    }
+    \\\cline{2-11}
+     
+      & 非对称角色 & 交换 & 
+       -/497
+      &
+      14.5±2.0 & 18.3±3.7 & 26.8±3.2 & 26.4±2.5 & \textbf{52.0±4.6} & \underline{49.1±10.8} &
+      \tabincell{l}{\specialrule{0em}{0em}{1mm}
+      \textbf{E27}: \label{example:E27}\colorbox{lightred}{\color{darkred}北京}到\colorbox{lightred}{\color{darkred}上海}航班\;/\; 
+      \colorbox{lightgreen}{\color{darkgreen}上海}到\colorbox{lightgreen}{\color{darkgreen}北京}航班\\
+      \qquad\, \colorbox{lightred}{\color{darkred}Beijing} to \colorbox{lightred}{\color{darkred}Shanghai} flights\;/\;
+      \colorbox{lightgreen}{\color{darkgreen}Shanghai} to \colorbox{lightgreen}{\color{darkgreen}Beijing} flights
+    }
+    \\\cline{2-11}
+    & \tabincell{c}{反义非对称} & 交换+反义 &
+     49/-
+     &
+      \textbf{47.6±3.4}& 37.4±7.7 & \underline{44.2±1.1} & 25.8±3.1 & 23.1±6.7 & 29.9±1.9 &
+     \tabincell{l}{\specialrule{0em}{0em}{1mm}
+      \textbf{E28}: \label{example:E28}\colorbox{lightred}{\color{darkred}男人}比\colorbox{lightred}{\color{darkred}女人}更\colorbox{lightred}{\color{darkred}高}吗\;/\; 
+      \colorbox{lightgreen}{\color{darkgreen}女人}比\colorbox{lightgreen}{\color{darkgreen}男人}更\colorbox{lightgreen}{\color{darkgreen}矮}吗\\
+      \qquad\, are \colorbox{lightred}{\color{darkred}men}\colorbox{lightred}{\color{darkred}taller}  than \colorbox{lightred}{\color{darkred}women}\;/\; are \colorbox{lightgreen}{\color{darkgreen}women}\colorbox{lightgreen}{\color{darkgreen}shorter} than \colorbox{lightgreen}{\color{darkgreen}men}
+    }
+    \\\cline{2-11}
+     
+     & 主被动 & 插入/交换 &
+      94/37
+     &
+     76.8±1.4& 72.5±0.0 & \underline{77.4±0.9} & 74.0±0.7 & \textbf{85.2±1.4} & 74.8±2.2 &
+     \tabincell{l}{
+     \specialrule{0em}{0em}{1mm}
+      \textbf{E29}: \label{example:E29}梦见狗咬左腿\;/\;梦见\colorbox{lightgreen}{\color{darkgreen}被}狗咬左腿\\
+     \qquad\, dreamed of being bitten by a dog\;/\; 
+     dreamed of being bitten by a dog
+     } 
+    %  & Voice & insert passive word &
+    %   94/37
+    %  &
+    %  \underline{76.8±1.4}& 72.5±0.0 & \textbf{85.2±1.4} & 74.8±2.2 &
+    %  \tabincell{l}{
+    %  \specialrule{0em}{0em}{1mm}
+    %   \textbf{E29}: \label{example:E29}狗咬了猫怎么办\;/\;猫\colorbox{lightgreen}{\color{darkgreen}被}被狗咬了怎么办\\
+    %  \qquad\, what to do if dog bites cat\;/\; 
+    %  what to do if cat \colorbox{lightgreen}{\color{darkgreen}is bitten} by dog
+    %  } 
+    %  \\\cline{2-11}
+    %  \specialrule{0em}{0em}{1mm}
+    %  &\multicolumn{2}{c|}{\textbf{Micro / Macro Acc}}&59.1 / 59.1 & 60.0 / 56.5  & \textbf{72.6} / \underline{63.4}  & \underline{70.2} / \textbf{61.6} & \tabincell{l}{-}
+    \\
+    \midrule[0.7pt]
+     
+    % Pragmatic Features
+    \multirow{6}*{\rotatebox{90}{\textbf{{语境}}}}
+     & 错别字 & 替换字 &
+     468/-
+     &
+     \textbf{68.0±2.0} &\underline{65.1±0.2} & 64.2±0.6 & 65.0±2.3 & 63.5±1.8 & 63.2±1.6 &
+     \tabincell{l}{
+      \textbf{E30}: \label{example:E30}什么\colorbox{lightred}{\color{darkred}纹身}适合我\;/\;什么\colorbox{lightgreen}{\color{darkgreen}文身}适合我
+    \\ 
+    \qquad\, what \colorbox{lightred}{\color{darkred}tattoo} suits me\;/\; what \colorbox{lightgreen}{\color{darkgreen}tatoo} suits me
+    }\\
+    \cline{2-11}
+    & \multirow{1}*{\tabincell{c}{简单冗余}} & 插入/替换 &
+    213/-
+    &
+    98.7±0.5 & 98.4±0.2 & 98.6±0.5 & 99.2±0.2 & \underline{99.5±0.0} & \textbf{99.8±0.2} &
+    \tabincell{l}{
+     \textbf{E31}: \label{example:E31}人为什么做梦 \;/\;  
+    \colorbox{lightgreen}{\color{darkgreen}那么}人为什么做梦 \\ 
+    \qquad\, why people dream \;/\;  
+    \colorbox{lightgreen}{\color{darkgreen}so} why people dream}\\
+    \specialrule{0em}{0em}{1mm}
+    \cline{2-11}
+    &  \multirow{1}*{\tabincell{c}{复杂冗余}} & 插入/替换 &
+    131/-
+    &
+    46.5±0.6 & 56.2±2.0 & 64.1±2.0 & 61.6±1.6 & \underline{65.1±3.4} & \textbf{68.4±0.3} &
+    \tabincell{l}{\specialrule{0em}{0em}{1mm}
+     \textbf{E32}: \label{example:E32}附近最好的餐厅 \;/\;  
+    \colorbox{lightgreen}{\color{darkgreen}求助我旁边}哪家餐厅\colorbox{lightgreen}{\color{darkgreen}最好吃}? \\ 
+    \qquad\, best restaurant nearby \;/\;  
+    \colorbox{lightgreen}{\color{darkgreen}heeelp!!!}which restaurant is best \colorbox{lightgreen}{\color{darkgreen}in my area}?}
+    % \\\cline{2-11}
+    %  \specialrule{0em}{0em}{1mm}
+    %  &\multicolumn{2}{c|}{\textbf{Micro / Macro Acc}}&78.9 / 72.6 & 82.3 / 77.3  & \underline{86.4} / \underline{82.3}  & \textbf{87.8} / \textbf{84.1} & \tabincell{l}{-}
+    % \\\midrule[0.7pt]
+    
+    %Colloquialism
+    
+    % \multirow{2}*{\rotatebox{90}{\textbf{{Pragmatic Features}}}} & simple & insert or replace &
+    % 98.7±0.57 & 98.4±0.23 & \underline{99.5±0} & \textbf{99.8±0.23} &
+    % \tabincell{l}{人为什么做梦 \quad/  
+    % \colorbox{lightgreen}{\color{darkgreen}我想知道}人为什么做梦 \\ 
+    % why people dream \quad/  
+    % \colorbox{lightgreen}{\color{darkgreen}wanna know} why people dream}\\
+    % \specialrule{0em}{0em}{1mm}
+    % \cline{2-11}
+    
+    % & complex & insert or replace &
+    % 46.5±0.61 & 56.2±2.02 & \underline{65.1±3.42} & \textbf{68.4±0.37} &
+    % \tabincell{l}{\specialrule{0em}{0em}{1mm}附近最好的餐厅 \quad/  
+    % \colorbox{lightgreen}{\color{darkgreen}求助我旁边}哪家餐厅\colorbox{lightgreen}{\color{darkgreen}最好吃}? \\ 
+    % best restaurant nearby \quad/  
+    % \colorbox{lightgreen}{\color{darkgreen}heeelp!!!}which restaurant is best \colorbox{lightgreen}{\color{darkgreen}in my area}?}
+    % \\\cline{2-11}
+    %  \specialrule{0em}{0em}{1mm}
+    %  &\multicolumn{2}{c|}{\textbf{Micro / Macro Acc}}&78.9 / 72.6 & 82.3 / 77.3  & \underline{86.4} / \underline{82.3}  & \textbf{87.8} / \textbf{84.1} & \tabincell{l}{-}\\
+    %  \midrule[0.7pt]
+    %  \multicolumn{3}{c|}{\textbf{Micro / Macro Acc}}&66.6 / 62.0 & 69.8 / 65.1  & \textbf{73.8} / \underline{69.8}  & \underline{73.8} / \textbf{70.2} & \tabincell{l}{-}
+     \\
+    \midrule[0.7pt]
+    \textbf{共计} & \textbf{13} & \textbf{32} & \textbf{2803/7318} & \multicolumn{6}{l|}{-}  & -  \\
+    \bottomrule[0.7pt]
+    % \midrule[0.7pt]
+    % Count
+    % \textbf{{Total}} & 13 & 32 & &  & 2803/7318\\
+    % \midrule[0.7pt]
+    % \midrule[0.7pt]
+    
+    \end{tabular}
+    }
+    %\end{adjustbox}
+     \label{table5-2}
+\end{table}
+    
+    

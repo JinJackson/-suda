@@ -1,0 +1,24 @@
+\begin{table}[h]
+    \caption{LCQMC及增强数据示例}
+    \centering
+    \newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+    \begin{tabular}{lllcc}
+    \toprule[0.7pt]
+    \textbf{样本来源} & \textbf{问题1} & \textbf{问题2}& \textbf{标签}& \textbf{合格？} \\
+    \midrule[0.7pt]
+
+    LCQMC & \multirow{4}{*}{移动号码如何转为电信号码？} & 能把移动转为电信号码吗？ & 1 & Y \\
+    BT & & 如何将手机号码转换为电信号码？ & 1 & N \\
+    EDA &  & 移动号码转为电信号码？ & 1 & Y \\
+    DDA &  & 电信号码可以改为移动号码吗？ & 0 & Y \\
+    \midrule[0.4pt]
+    LCQMC & \multirow{4}{*}{什么牌子空调最好？} & 什么牌子空调扇最好？ & 0 & Y \\
+    BT &  & 哪个牌子的空调最好？ & 1 & Y \\
+    EDA &  & 什么牌子的空气调节最好？ & 1 & N \\
+    DDA &  & 空调什么牌子最好？ & 1 & Y \\
+
+
+    \bottomrule[0.7pt]
+    \end{tabular}
+    \label{table4-1}
+\end{table}

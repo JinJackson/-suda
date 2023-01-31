@@ -1,0 +1,70 @@
+\begin{table}
+    \caption{CQM$_{robust}$详细评估结果}
+    % \begin{spacing}{1.1}
+    % \scriptsize
+    \centering
+    \newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+    \resizebox{155mm}{38mm}
+    {
+    \begin{tabular}{cc|cccccc|c|c|c|c}
+    \toprule[0.7pt]
+    \multicolumn{2}{c|}{\multirow{2}*{\textbf{\tabincell{c}{模型}}} }
+     & \multicolumn{7}{c|}{\textbf{词法}} & \multirow{2}*{\textbf{句法}} & \multirow{2}*{\textbf{语境}} & \multirow{2}*{\textbf{CQM$_{robust}$}} \\
+    \multicolumn{2}{c|}{ }& 基础词汇 & 命名实体 & 同义词 & 反义词 & 否定 & 时态 & \textbf{词法} &  &  & \\
+     \midrule[0.7pt]
+    \multirow{2}*{\tabincell{c}{BERT\textsubscript{b}}} & micro & 62.1±1.1 & 92.3±0.5 & 69.5±0.4 & 50.6±3.4 &
+    64.4±5.9 & 35.1±3.3 & 67.2±0.7 & 59.1±0.4 &
+    72.6±1.6 & 66.6±0.6  \\
+    & macro & 51.9±1.5 & 91.2±0.7 & 76.4±0.6 & 50.6±3.4 &
+    57.6±4.4 & 35.5±3.3 & 61.4±1.2 & 59.1±0.7 &
+    71.1±1.1 & 62.0±0.9  \\\hline
+    
+    \multirow{2}*{\tabincell{c}{ERNIE\textsubscript{b}}} & micro & 64.6±0.5 & \underline{92.8±0.4} & 73.2±0.9 & 69.6±2.9 &
+    77.8±1.1 & 48.0±1.9 & 71.0±0.3 & 60.0±1.2 &
+    72.4±0.3 & 69.8±0.3  \\
+    & macro & 52.4±0.7 & \underline{92.3±0.6} & 79.5±0.7 & 69.6±2.9 &
+    69.1±1.2 & 48.5±1.9 & 65.5±0.5 & 56.5±1.0 &
+    73.2±0.8 & 65.1±0.3  \\\hline
+    
+    \multirow{2}*{\tabincell{c}{RoBERTa\textsubscript{b}}} & micro & 64.2±0.1 & 90.6±1.8 & 74.2±1.4  &65.0±1.5 & 76.3±1.7 & 43.7±0.2 &
+    70.1±0.1 & 63.1±0.6 & 73.3±0.1 & 69.5±0.1  \\
+    & macro & 53.3±0.2 & 89.4±2.5 & 80.3±1.1 & 65.0±1.5 & 68.8±1.3 & 44.0±0.2 &
+    65.0±0.1 & 60.9±0.6 & 75.6±0.5 & 65.5±0.1 \\\hline
+    
+    \multirow{2}*{\tabincell{c}{MacBERT\textsubscript{b}}} & micro & 64.8±1.1 & 92.0±0.7 & 73.3±1.1  & 73.1±4.3 & \underline{80.7±0.5} & 47.6±1.3 &
+    71.2±0.7 & 62.1±1.0 & \underline{73.4±1.5} & 70.3±0.6  \\
+    & macro & 54.2±0.9 & 90.7±0.6 & 79.7±0.5 & 73.1±4.6 & 70.7±0.1 & 47.7±0.2 &
+    66.3±0.2 & 55.5±0.7 & 75.2±1.1 & 65.8±0.1  \\\hline
+    
+    \multirow{2}*{\tabincell{c}{RoBERTa\textsubscript{l}}} & micro & \textbf{67.2±0.9} &
+    92.5±0.3 & \underline{76.0±2.1} & \textbf{91.7±2.3} & 80.2±0.8 & \textbf{58.6±2.8} &
+    \underline{74.1±0.3} &
+    \textbf{72.6±1.4} &
+    73.2±1.9 &
+    \textbf{73.8±0.3}  \\
+    & macro & \textbf{57.7±0.6} &
+    91.6±0.3 & \underline{81.7±1.6} & \textbf{91.7±2.3} & \underline{72.3±0.6} & \textbf{59.0±2.7} &
+    \underline{70.2±0.3} &
+    \textbf{63.4±1.2} &
+    \underline{76.0±2.0} & \underline{69.8±0.2}  \\\hline
+    
+    \multirow{2}*{\tabincell{c}{MacBERT\textsubscript{l}}} & micro & \underline{65.6±0.8} &
+    \textbf{93.2±0.6} & \textbf{83.2±1.6} & \underline{90.7±2.3} & \textbf{84.3±1.3} & \underline{55.5±4.0} &
+    \textbf{74.4±0.4} &
+    \underline{70.2±3.7} &
+    \textbf{73.7±1.1} &
+    \underline{73.8±0.5}  \\
+    & macro & \underline{54.7±0.9} &
+    \textbf{92.6±0.9} & \textbf{87.1±1.2} & \underline{90.7±2.3} & \textbf{78.1±0.9} & \underline{56.1±4.0} &
+    \textbf{70.7±0.5} &
+    \underline{61.6±2.4} &
+    \textbf{77.1±0.6} & \textbf{70.2±0.5}  \\
+    
+    \bottomrule[0.7pt]
+    \end{tabular}
+    }
+    \label{table5-5}
+    % \end{spacing}
+\end{table}
+    
+    % \setlength{\tabcolsep}{1.5mm}{

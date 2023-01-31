@@ -1,0 +1,35 @@
+% 表： 对抗训练性能结果
+\begin{table*}[!h]
+    \begin{spacing}{1.4}
+    \scriptsize
+    \caption{对抗训练性能对比} 
+    \centering
+    \newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+    \begin{tabular}{lc|cc|cc|c|cc}
+    \toprule[0.7pt]
+    %  \multirow{2}*{\textbf{Model}} &
+     \multirow{2}*{\textbf{训练数据}} & \multirow{2}*{\textbf{LCQMC}} & \multicolumn{4}{c|}{\textbf{对抗数据}} & \multirow{2}*{\textbf{CHECKLIST\textsubscript{nat}}} & \multicolumn{2}{c}{\textbf{CQM\textsubscript{robust}}} \\
+     & & PWWS & PWWS\textsubscript{nat}& TEXTFOOLER & TEXTFOOLER\textsubscript{nat}& & Micro & Macro\\
+    \midrule[0.7pt]
+    
+     LCQMC & \underline{87.7} & 58.1 & 81.5& 57.1 & 87.8& \underline{76.9} & \underline{73.8} & 69.8 \\
+    
+    %  LCQMC+PAWS &87.4\textcolor{textred}{\textsubscript{-0.3}} & 61.5\textcolor{textgreen}{\textsubscript{+3.4}} & 81.8\textcolor{textgreen}{\textsubscript{+0.3}}&58.3\textcolor{textgreen}{\textsubscript{+1.2}} & \underline{88.0}\textcolor{textgreen}{\textsubscript{+0.2}}& 76.4\textcolor{textred}{\textsubscript{-0.5}} & 73.2
+    % \textcolor{textred}{\textsubscript{-0.6}} & \textbf{70.6}\textcolor{textgreen}{\textsubscript{+0.8}} \\
+    
+     LCQMC+PWWS & \underline{87.7}\textcolor{textgreen}{\textsubscript{+0.0}} & \textbf{97.6}\textcolor{textgreen}{\textsubscript{+39.5}} & 81.8\textcolor{textgreen}{\textsubscript{+0.3}}& \underline{73.1}\textcolor{textgreen}{\textsubscript{+16.0}} & 87.6\textcolor{textred}{\textsubscript{-0.2}}& 76.0\textcolor{textred}{\textsubscript{-0.9}} & \textbf{75.2}
+    \textcolor{textgreen}{\textsubscript{+1.4}} & \underline{70.4}\textcolor{textgreen}{\textsubscript{+0.6}} \\
+    
+     LCQMC+FOOLER & 87.5\textcolor{textred}{\textsubscript{-0.2}} & \underline{78.5}\textcolor{textgreen}{\textsubscript{+20.4}} & \textbf{83.8}\textcolor{textgreen}{\textsubscript{+2.3}}& \textbf{80.8}\textcolor{textgreen}{\textsubscript{+23.7}} & 82.0\textcolor{textred}{\textsubscript{-5.8}}&\textbf{79.2}\textcolor{textgreen}{\textsubscript{+2.3}} & 71.4
+    \textcolor{textred}{\textsubscript{-2.4}} & 68.8\textcolor{textred}{\textsubscript{-1.0}} \\
+    
+    % \midrule[0.4pt]
+    
+    % Ensemble & LCQMC &\textbf{88.0}\textcolor{textgreen}{$_{+0.3}$}&\underline{83.3}\textcolor{textgreen}{$_{+1.8}$} &60.3\textcolor{textgreen}{$_{+2.2}$}& \textbf{89.5}\textcolor{textgreen}{$_{+1.7}$}&54.3\textcolor{textred}{$_{-2.8}$}& 73.4\textcolor{textred}{$_{-3.5}$} & 72.0\textcolor{textred}{$_{-1.8}$} & 67.4\textcolor{textred}{$_{-2.4}$} \\
+    
+    
+    \bottomrule[0.7pt]
+    \end{tabular}
+    \label{table5-7}
+    \end{spacing}
+\end{table*}

@@ -1,0 +1,22 @@
+% 表： 例子
+\begin{table}
+    \caption{CQM$_{robust}$数据样例}
+    % \begin{spacing}{1.1}
+    % \small
+    \centering
+    \newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+    \begin{tabular}{llcc}
+    \toprule[0.7pt]
+     \textbf{问题1} & \textbf{问题2} & \textbf{标签} & \textbf{RoBERTa} \\
+    \midrule[0.7pt]
+    婴儿吃什么蔬菜好？ & 婴儿吃什么\colorbox{lightgreen}{\color{darkgreen}绿色}蔬菜好？\;\  & 0 & 1 \\\hline
+    心率过\colorbox{lightred}{\color{darkred}慢}有什么危害 & 心率过\colorbox{lightgreen}{\color{darkgreen}快}有什么危害 & 0 & 1 \\\hline
+    求关于\colorbox{lightred}{\color{darkred}监狱}的电视剧\quad\ & 求关于\colorbox{lightgreen}{\color{darkgreen}牢房}的电视剧 & 1 & 0 \\
+    
+        
+    \bottomrule[0.7pt]
+    
+    \end{tabular}
+    \label{table5-1}
+    % \end{spacing}
+\end{table}

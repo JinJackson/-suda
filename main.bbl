@@ -1,0 +1,372 @@
+\begin{thebibliography}{10}
+
+\bibitem{salton1975vector}
+Gerard Salton, Anita Wong and Chung-Shu Yang.
+\newblock A vector space model for automatic indexing[J].
+\newblock Communications of the ACM, 1975, 18(11): 613--620.
+
+\bibitem{robertson1994some}
+Stephen~E Robertson and Steve Walker.
+\newblock Some simple effective approximations to the 2-poisson model for
+  probabilistic weighted retrieval [A]. SIGIR’94 [C]. Springer, 1994.
+
+\bibitem{huang2013learning}
+Po{-}Sen Huang, Xiaodong He, Jianfeng Gao, Li~Deng, Alex Acero and Larry~P.
+  Heck.
+\newblock Learning deep structured semantic models for web search using
+  clickthrough data [A]. Qi~He, Arun Iyengar, Wolfgang Nejdl, Jian Pei and
+  Rajeev Rastogi. 22nd {ACM} International Conference on Information and
+  Knowledge Management, CIKM'13, San Francisco, CA, USA, October 27 - November
+  1, 2013 [C]. {ACM}, 2013.
+
+\bibitem{shen2014latent}
+Yelong Shen, Xiaodong He, Jianfeng Gao, Li~Deng and Gr{\'{e}}goire Mesnil.
+\newblock A Latent Semantic Model with Convolutional-Pooling Structure for
+  Information Retrieval [A]. Jianzhong Li, Xiaoyang~Sean Wang, Minos~N.
+  Garofalakis, Ian Soboroff, Torsten Suel and Min Wang. Proceedings of the 23rd
+  {ACM} International Conference on Conference on Information and Knowledge
+  Management, {CIKM} 2014, Shanghai, China, November 3-7, 2014 [C]. {ACM},
+  2014.
+
+\bibitem{palangi2014semantic}
+Hamid Palangi, Li~Deng, Yelong Shen, Jianfeng Gao, Xiaodong He, Jianshu Chen,
+  Xinying Song and R~Ward.
+\newblock Semantic modelling with long-short-term memory for information
+  retrieval[J].
+\newblock ArXiv preprint, 2014, abs/1412.6629.
+
+\bibitem{krizhevsky2012imagenet}
+Alex Krizhevsky, Ilya Sutskever and Geoffrey~E. Hinton.
+\newblock ImageNet Classification with Deep Convolutional Neural Networks [A].
+  Peter~L. Bartlett, Fernando C.~N. Pereira, Christopher J.~C. Burges,
+  L{\'{e}}on Bottou and Kilian~Q. Weinberger. Advances in Neural Information
+  Processing Systems 25: 26th Annual Conference on Neural Information
+  Processing Systems 2012. Proceedings of a meeting held December 3-6, 2012,
+  Lake Tahoe, Nevada, United States [C]. 2012.
+
+\bibitem{santos2016attentive}
+Cicero~dos Santos, Ming Tan, Bing Xiang and Bowen Zhou.
+\newblock Attentive pooling networks[J].
+\newblock ArXiv preprint, 2016, abs/1602.03609.
+
+\bibitem{pang2016text}
+Liang Pang, Yanyan Lan, Jiafeng Guo, Jun Xu, Shengxian Wan and Xueqi Cheng.
+\newblock Text Matching as Image Recognition [A]. Dale Schuurmans and
+  Michael~P. Wellman. Proceedings of the Thirtieth {AAAI} Conference on
+  Artificial Intelligence, February 12-17, 2016, Phoenix, Arizona, {USA} [C].
+  {AAAI} Press, 2016.
+
+\bibitem{gong2017natural}
+Yichen Gong, Heng Luo and Jian Zhang.
+\newblock Natural Language Inference over Interaction Space [A]. 6th
+  International Conference on Learning Representations, {ICLR} 2018, Vancouver,
+  BC, Canada, April 30 - May 3, 2018, Conference Track Proceedings [C].
+  OpenReview.net, 2018.
+
+\bibitem{wang2017bilateral}
+Zhiguo Wang, Wael Hamza and Radu Florian.
+\newblock Bilateral Multi-Perspective Matching for Natural Language Sentences
+  [A]. Carles Sierra. Proceedings of the Twenty-Sixth International Joint
+  Conference on Artificial Intelligence, {IJCAI} 2017, Melbourne, Australia,
+  August 19-25, 2017 [C]. ijcai.org, 2017.
+
+\bibitem{kim2019semantic}
+Seonhoon Kim, Inho Kang and Nojun Kwak.
+\newblock Semantic Sentence Matching with Densely-Connected Recurrent and
+  Co-Attentive Information [A]. The Thirty-Third {AAAI} Conference on
+  Artificial Intelligence, {AAAI} 2019, The Thirty-First Innovative
+  Applications of Artificial Intelligence Conference, {IAAI} 2019, The Ninth
+  {AAAI} Symposium on Educational Advances in Artificial Intelligence, {EAAI}
+  2019, Honolulu, Hawaii, USA, January 27 - February 1, 2019 [C]. {AAAI} Press,
+  2019.
+
+\bibitem{ruckle2019coala}
+Andreas R{\"{u}}ckl{\'{e}}, Nafise~Sadat Moosavi and Iryna Gurevych.
+\newblock {COALA:} {A} Neural Coverage-Based Approach for Long Answer Selection
+  with Small Data [A]. The Thirty-Third {AAAI} Conference on Artificial
+  Intelligence, {AAAI} 2019, The Thirty-First Innovative Applications of
+  Artificial Intelligence Conference, {IAAI} 2019, The Ninth {AAAI} Symposium
+  on Educational Advances in Artificial Intelligence, {EAAI} 2019, Honolulu,
+  Hawaii, USA, January 27 - February 1, 2019 [C]. {AAAI} Press, 2019.
+
+\bibitem{nogueira2019passage}
+Rodrigo Nogueira and Kyunghyun Cho.
+\newblock Passage Re-ranking with BERT[J].
+\newblock ArXiv preprint, 2019, abs/1901.04085.
+
+\bibitem{mass2019study}
+Yosi Mass, Haggai Roitman, Shai Erera, Or~Rivlin, Bar Weiner and David
+  Konopnicki.
+\newblock A study of bert for non-factoid question-answering under passage
+  length constraints[J].
+\newblock ArXiv preprint, 2019, abs/1908.06780.
+
+\bibitem{yu2018qanet}
+Adams~Wei Yu, David Dohan, Minh{-}Thang Luong, Rui Zhao, Kai Chen, Mohammad
+  Norouzi and Quoc~V. Le.
+\newblock QANet: Combining Local Convolution with Global Self-Attention for
+  Reading Comprehension [A]. 6th International Conference on Learning
+  Representations, {ICLR} 2018, Vancouver, BC, Canada, April 30 - May 3, 2018,
+  Conference Track Proceedings [C]. OpenReview.net, 2018.
+
+\bibitem{wei2019eda}
+Jason Wei and Kai Zou.
+\newblock {EDA}: Easy Data Augmentation Techniques for Boosting Performance on
+  Text Classification Tasks [A]. Proceedings of the 2019 Conference on
+  Empirical Methods in Natural Language Processing and the 9th International
+  Joint Conference on Natural Language Processing (EMNLP-IJCNLP) [C]. Hong
+  Kong, China: Association for Computational Linguistics, 2019.
+
+\bibitem{jin2020bert}
+Di~Jin, Zhijing Jin, Joey~Tianyi Zhou and Peter Szolovits.
+\newblock Is {BERT} Really Robust? {A} Strong Baseline for Natural Language
+  Attack on Text Classification and Entailment [A]. The Thirty-Fourth {AAAI}
+  Conference on Artificial Intelligence, {AAAI} 2020, The Thirty-Second
+  Innovative Applications of Artificial Intelligence Conference, {IAAI} 2020,
+  The Tenth {AAAI} Symposium on Educational Advances in Artificial
+  Intelligence, {EAAI} 2020, New York, NY, USA, February 7-12, 2020 [C]. {AAAI}
+  Press, 2020.
+
+\bibitem{cer2018universal}
+Daniel Cer, Yinfei Yang, Sheng-yi Kong, Nan Hua, Nicole Limtiaco, Rhomni~St
+  John, Noah Constant, Mario Guajardo-Cespedes, Steve Yuan, Chris Tar et~al.
+\newblock Universal sentence encoder[J].
+\newblock ArXiv preprint, 2018, abs/1803.11175.
+
+\bibitem{li2020bert}
+Linyang Li, Ruotian Ma, Qipeng Guo, Xiangyang Xue and Xipeng Qiu.
+\newblock {BERT}-{ATTACK}: Adversarial Attack Against {BERT} Using {BERT} [A].
+  Proceedings of the 2020 Conference on Empirical Methods in Natural Language
+  Processing (EMNLP) [C]. Online: Association for Computational Linguistics,
+  2020.
+
+\bibitem{garg2020tanda}
+Siddhant Garg, Thuy Vu and Alessandro Moschitti.
+\newblock {TANDA:} Transfer and Adapt Pre-Trained Transformer Models for Answer
+  Sentence Selection [A]. The Thirty-Fourth {AAAI} Conference on Artificial
+  Intelligence, {AAAI} 2020, The Thirty-Second Innovative Applications of
+  Artificial Intelligence Conference, {IAAI} 2020, The Tenth {AAAI} Symposium
+  on Educational Advances in Artificial Intelligence, {EAAI} 2020, New York,
+  NY, USA, February 7-12, 2020 [C]. {AAAI} Press, 2020.
+
+\bibitem{cohen2018wikipassageqa}
+Daniel Cohen, Liu Yang and W.~Bruce Croft.
+\newblock WikiPassageQA: {A} Benchmark Collection for Research on Non-factoid
+  Answer Passage Retrieval [A]. Kevyn Collins{-}Thompson, Qiaozhu Mei, Brian~D.
+  Davison, Yiqun Liu and Emine Yilmaz. The 41st International {ACM} {SIGIR}
+  Conference on Research {\&} Development in Information Retrieval, {SIGIR}
+  2018, Ann Arbor, MI, USA, July 08-12, 2018 [C]. {ACM}, 2018.
+
+\bibitem{liu2018lcqmc}
+Xin Liu, Qingcai Chen, Chong Deng, Huajun Zeng, Jing Chen, Dongfang Li and
+  Buzhou Tang.
+\newblock {LCQMC}:A Large-scale {C}hinese Question Matching Corpus [A].
+  Proceedings of the 27th International Conference on Computational Linguistics
+  [C]. Santa Fe, New Mexico, USA: Association for Computational Linguistics,
+  2018.
+
+\bibitem{dror2018hitchhiker}
+Rotem Dror, Gili Baumer, Segev Shlomov and Roi Reichart.
+\newblock The Hitchhiker{'}s Guide to Testing Statistical Significance in
+  Natural Language Processing [A]. Proceedings of the 56th Annual Meeting of
+  the Association for Computational Linguistics (Volume 1: Long Papers) [C].
+  Melbourne, Australia: Association for Computational Linguistics, 2018.
+
+\bibitem{johnson1999insignificance}
+Douglas~H Johnson.
+\newblock The insignificance of statistical significance testing[J].
+\newblock The journal of wildlife management, 1999, : 763--772.
+
+\bibitem{devlin2018bert}
+Jacob Devlin, Ming-Wei Chang, Kenton Lee and Kristina Toutanova.
+\newblock {BERT}: Pre-training of Deep Bidirectional Transformers for Language
+  Understanding [A]. Proceedings of the 2019 Conference of the North {A}merican
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies, Volume 1 (Long and Short Papers) [C]. Minneapolis, Minnesota:
+  Association for Computational Linguistics, 2019.
+
+\bibitem{vaswani2017attention}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
+  Aidan~N. Gomez, Lukasz Kaiser and Illia Polosukhin.
+\newblock Attention is All you Need [A]. Isabelle Guyon, Ulrike von Luxburg,
+  Samy Bengio, Hanna~M. Wallach, Rob Fergus, S.~V.~N. Vishwanathan and Roman
+  Garnett. Advances in Neural Information Processing Systems 30: Annual
+  Conference on Neural Information Processing Systems 2017, December 4-9, 2017,
+  Long Beach, CA, {USA} [C]. 2017.
+
+\bibitem{nair2010rectified}
+Vinod Nair and Geoffrey~E. Hinton.
+\newblock Rectified Linear Units Improve Restricted Boltzmann Machines [A].
+  Johannes F{\"{u}}rnkranz and Thorsten Joachims. Proceedings of the 27th
+  International Conference on Machine Learning (ICML-10), June 21-24, 2010,
+  Haifa, Israel [C]. Omnipress, 2010.
+
+\bibitem{han1995influence}
+Jun Han and Claudio Moraga.
+\newblock The influence of the sigmoid function parameters on the speed of
+  backpropagation learning [A]. International workshop on artificial neural
+  networks [C]. Springer, 1995.
+
+\bibitem{rutherford2002lecture}
+Thomas Rutherford.
+\newblock Lecture notes on constant elasticity functions[J].
+\newblock University of Colorado, 2002.
+
+\bibitem{ramos2003using}
+Juan Ramos et~al.
+\newblock Using tf-idf to determine word relevance in document queries [A].
+  Proceedings of the first instructional conference on machine learning [C].
+  Citeseer, 2003.
+
+\bibitem{tan2016improved}
+Ming Tan, Cicero dos Santos, Bing Xiang and Bowen Zhou.
+\newblock Improved Representation Learning for Question Answer Matching [A].
+  Proceedings of the 54th Annual Meeting of the Association for Computational
+  Linguistics (Volume 1: Long Papers) [C]. Berlin, Germany: Association for
+  Computational Linguistics, 2016.
+
+\bibitem{ruckle2017representation}
+Andreas R{\"u}ckl{\'e} and Iryna Gurevych.
+\newblock Representation Learning for Answer Selection with {LSTM}-Based
+  Importance Weighting [A]. {IWCS} 2017 {---} 12th International Conference on
+  Computational Semantics {---} Short papers [C]. 2017.
+
+\bibitem{parikh2016decomposable}
+Ankur Parikh, Oscar T{\"a}ckstr{\"o}m, Dipanjan Das and Jakob Uszkoreit.
+\newblock A Decomposable Attention Model for Natural Language Inference [A].
+  Proceedings of the 2016 Conference on Empirical Methods in Natural Language
+  Processing [C]. Austin, Texas: Association for Computational Linguistics,
+  2016.
+
+\bibitem{han2019micron}
+Hojae Han, Seungtaek Choi, Haeju Park and Seung-won Hwang.
+\newblock {MICRON}: Multigranular Interaction for Contextualizing
+  {R}epresentati{ON} in Non-factoid Question Answering [A]. Proceedings of the
+  2019 Conference on Empirical Methods in Natural Language Processing and the
+  9th International Joint Conference on Natural Language Processing
+  (EMNLP-IJCNLP) [C]. Hong Kong, China: Association for Computational
+  Linguistics, 2019.
+
+\bibitem{xu2019passage}
+Peng Xu, Xiaofei Ma, Ramesh Nallapati and Bing Xiang.
+\newblock Passage ranking with weak supervision[J].
+\newblock ArXiv preprint, 2019, abs/1905.05910.
+
+\bibitem{bao2020unilmv2}
+Hangbo Bao, Li~Dong, Furu Wei, Wenhui Wang, Nan Yang, Xiaodong Liu, Yu~Wang,
+  Jianfeng Gao, Songhao Piao, Ming Zhou and Hsiao{-}Wuen Hon.
+\newblock UniLMv2: Pseudo-Masked Language Models for Unified Language Model
+  Pre-Training [A]. Proceedings of the 37th International Conference on Machine
+  Learning, {ICML} 2020, 13-18 July 2020, Virtual Event [C]. {PMLR}, 2020.
+
+\bibitem{taylor1953cloze}
+Wilson~L Taylor.
+\newblock “Cloze procedure”: A new tool for measuring readability[J].
+\newblock Journalism quarterly, 1953, 30(4): 415--433.
+
+\bibitem{liu2019roberta}
+Yinhan Liu, Myle Ott, Naman Goyal, Jingfei Du, Mandar Joshi, Danqi Chen, Omer
+  Levy, Mike Lewis, Luke Zettlemoyer and Veselin Stoyanov.
+\newblock Roberta: A robustly optimized bert pretraining approach[J].
+\newblock ArXiv preprint, 2019, abs/1907.11692.
+
+\bibitem{cui2020revisiting}
+Yiming Cui, Wanxiang Che, Ting Liu, Bing Qin, Shijin Wang and Guoping Hu.
+\newblock Revisiting Pre-Trained Models for {C}hinese Natural Language
+  Processing [A]. Findings of the Association for Computational Linguistics:
+  EMNLP 2020 [C]. Online: Association for Computational Linguistics, 2020.
+
+\bibitem{iyer2017first}
+Shankar Iyer, Nikhil Dandekar and Korn{\'e}l Csernai.
+\newblock First quora dataset release: Question pairs[J].
+\newblock data. quora. com, 2017.
+
+\bibitem{chen2018bq}
+Jing Chen, Qingcai Chen, Xin Liu, Haijun Yang, Daohe Lu and Buzhou Tang.
+\newblock The {BQ} Corpus: A Large-scale Domain-specific {C}hinese Corpus For
+  Sentence Semantic Equivalence Identification [A]. Proceedings of the 2018
+  Conference on Empirical Methods in Natural Language Processing [C]. Brussels,
+  Belgium: Association for Computational Linguistics, 2018.
+
+\bibitem{jia2017adversarial}
+Robin Jia and Percy Liang.
+\newblock Adversarial Examples for Evaluating Reading Comprehension Systems
+  [A]. Proceedings of the 2017 Conference on Empirical Methods in Natural
+  Language Processing [C]. Copenhagen, Denmark: Association for Computational
+  Linguistics, 2017.
+
+\bibitem{alzantot2018generating}
+Moustafa Alzantot, Yash Sharma, Ahmed Elgohary, Bo-Jhang Ho, Mani Srivastava
+  and Kai-Wei Chang.
+\newblock Generating Natural Language Adversarial Examples [A]. Proceedings of
+  the 2018 Conference on Empirical Methods in Natural Language Processing [C].
+  Brussels, Belgium: Association for Computational Linguistics, 2018.
+
+\bibitem{ren2019generating}
+Shuhuai Ren, Yihe Deng, Kun He and Wanxiang Che.
+\newblock Generating Natural Language Adversarial Examples through Probability
+  Weighted Word Saliency [A]. Proceedings of the 57th Annual Meeting of the
+  Association for Computational Linguistics [C]. Florence, Italy: Association
+  for Computational Linguistics, 2019.
+
+\bibitem{nie2019adversarial}
+Yixin Nie, Adina Williams, Emily Dinan, Mohit Bansal, Jason Weston and Douwe
+  Kiela.
+\newblock Adversarial {NLI}: A New Benchmark for Natural Language Understanding
+  [A]. Proceedings of the 58th Annual Meeting of the Association for
+  Computational Linguistics [C]. Online: Association for Computational
+  Linguistics, 2020.
+
+\bibitem{min2020syntactic}
+Junghyun Min, R.~Thomas McCoy, Dipanjan Das, Emily Pitler and Tal Linzen.
+\newblock Syntactic Data Augmentation Increases Robustness to Inference
+  Heuristics [A]. Proceedings of the 58th Annual Meeting of the Association for
+  Computational Linguistics [C]. Online: Association for Computational
+  Linguistics, 2020.
+
+\bibitem{bao2021defending}
+Rongzhou Bao, Jiayi Wang and Hai Zhao.
+\newblock Defending Pre-trained Language Models from Adversarial Word
+  Substitutions Without Performance Sacrifice[J].
+\newblock ArXiv preprint, 2021, abs/2105.14553.
+
+\bibitem{wang2021natural}
+Xiaosen Wang, Jin Hao, Yichen Yang and Kun He.
+\newblock Natural language adversarial defense through synonym encoding [A].
+  Uncertainty in Artificial Intelligence [C]. PMLR, 2021.
+
+\bibitem{ribeiro2020beyond}
+Marco~Tulio Ribeiro, Tongshuang Wu, Carlos Guestrin and Sameer Singh.
+\newblock Beyond Accuracy: Behavioral Testing of {NLP} Models with
+  {C}heck{L}ist [A]. Proceedings of the 58th Annual Meeting of the Association
+  for Computational Linguistics [C]. Online: Association for Computational
+  Linguistics, 2020.
+
+\bibitem{gui2021textflint}
+Xiao Wang, Qin Liu, Tao Gui, Qi~Zhang, Yicheng Zou, Xin Zhou, Jiacheng Ye,
+  Yongxin Zhang, Rui Zheng, Zexiong Pang, Qinzhuo Wu, Zhengyan Li, Chong Zhang,
+  Ruotian Ma, Zichu Fei, Ruijian Cai, Jun Zhao, Xingwu Hu, Zhiheng Yan, Yiding
+  Tan, Yuan Hu, Qiyuan Bian, Zhihua Liu, Shan Qin, Bolin Zhu, Xiaoyu Xing,
+  Jinlan Fu, Yue Zhang, Minlong Peng, Xiaoqing Zheng, Yaqian Zhou, Zhongyu Wei,
+  Xipeng Qiu and Xuanjing Huang.
+\newblock {T}ext{F}lint: Unified Multilingual Robustness Evaluation Toolkit for
+  Natural Language Processing [A]. Proceedings of the 59th Annual Meeting of
+  the Association for Computational Linguistics and the 11th International
+  Joint Conference on Natural Language Processing: System Demonstrations [C].
+  Online: Association for Computational Linguistics, 2021.
+
+\bibitem{conneau2019unsupervised}
+Alexis Conneau, Kartikay Khandelwal, Naman Goyal, Vishrav Chaudhary, Guillaume
+  Wenzek, Francisco Guzm{\'a}n, Edouard Grave, Myle Ott, Luke Zettlemoyer and
+  Veselin Stoyanov.
+\newblock Unsupervised Cross-lingual Representation Learning at Scale [A].
+  Proceedings of the 58th Annual Meeting of the Association for Computational
+  Linguistics [C]. Online: Association for Computational Linguistics, 2020.
+
+\bibitem{sun2019ernie}
+Yu~Sun, Shuohuan Wang, Yukun Li, Shikun Feng, Xuyi Chen, Han Zhang, Xin Tian,
+  Danxiang Zhu, Hao Tian and Hua Wu.
+\newblock Ernie: Enhanced representation through knowledge integration[J].
+\newblock ArXiv preprint, 2019, abs/1904.09223.
+
+\end{thebibliography}
