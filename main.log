@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.30)  1 FEB 2023 18:39
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.30)  1 FEB 2023 21:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1726,6 +1726,23 @@ Underfull \vbox (badness 1173) has occurred while \output is active []
  (./content/1.introduction.tex
 第一章
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1
+
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+
 Package fontspec Info: Could not resolve font "KaiTi/I" (it probably doesn't
 (fontspec)             exist).
 
@@ -1752,22 +1769,6 @@ Package fontspec Info: Font family 'KaiTi(0)' created for font 'KaiTi' with
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1
-
-
-
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5]
