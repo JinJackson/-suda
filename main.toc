@@ -7,15 +7,15 @@
 \contentsline {subsection}{\numberline {1.4.2}研究难点}{7}{subsection.1.4.2}%
 \contentsline {section}{\numberline {1.5}研究内容与组织结构}{9}{section.1.5}%
 \contentsline {subsection}{\numberline {1.5.1}研究内容}{9}{subsection.1.5.1}%
-\contentsline {subsection}{\numberline {1.5.2}论文组织结构}{10}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.2}论文组织结构}{11}{subsection.1.5.2}%
 \contentsline {chapter}{\numberline {第二章\hspace {.3em}}任务定义及评价方法}{12}{chapter.2}%
 \contentsline {section}{\numberline {2.1}任务定义}{12}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}答案选择任务定义}{12}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}问题复述识别任务定义}{12}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.2}问句复述识别任务定义}{13}{subsection.2.1.2}%
 \contentsline {section}{\numberline {2.2}语料资源概述}{13}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}答案选择数据集WPQA}{13}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}问题复述数据集LCQMC}{14}{subsection.2.2.2}%
-\contentsline {section}{\numberline {2.3}性能评价指标}{15}{section.2.3}%
+\contentsline {section}{\numberline {2.3}性能评价指标}{14}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}平均化倒数排序MRR}{15}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}平均化精度均值MAP}{15}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}准确率Acc}{16}{subsection.2.3.3}%
