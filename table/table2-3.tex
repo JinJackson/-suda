@@ -1,17 +1,20 @@
 \begin{table}
-    \caption{WPQA数据统计}
+    \caption{答案选择数据集统计信息}
     \centering
     \newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
-    \begin{tabular}{l|l|l|l}
+    \begin{tabular}{l|l|l|l|l|l|l|l|l}
     \toprule[0.7pt]
-    & \;\textbf{训练集} & \;\textbf{开发集} & \;\textbf{测试集} \\
-    \midrule[0.7pt]
 
-    问题 & \;3,332 & \;417 & \;416 \\
-    答案 & \;194,314\; & \;25,841\; & \;23,981 \\
-    相关答案 & \;5,560 & \;707 & \;700 \\
-    问题平均长度 & \;9.52 & \;9.69 & \;9.44 \\
-    答案平均长度\quad\quad & \;133.09 & \;134.13 & \;132.65 \\
+    \textbf{数据集} & \multicolumn{4}{c|}{\textbf{WikiPassageQA}} & \multicolumn{4}{c}{\textbf{TREC-QA}}\\ 
+    \hline
+    \textbf{划分} & \;\textbf{训练集} & \;\textbf{开发集} & \;\textbf{测试集} & \;\textbf{共计} & \;\textbf{训练集} & \;\textbf{开发集} & \;\textbf{测试集} & \;\textbf{共计}\\
+    % \midrule[0.7pt]
+    \hline
+    \textbf{问题} & \;3,332 & \;417 & \;416 & \;4,165 & \;1,229 & \;65 & \;68 & \;1,362\\
+    \textbf{答案} & \;194,314\; & \;25,841\; & \;23,981 & \;244,136 & \;53,313\; & \;1,117\; & \;1,442 & \;55,872\\
+    \textbf{相关答案} & \;5,560 & \;707 & \;700 & \;6,967 & \;6,299 & \;205 & \;248 & \;6,752\\
+    \textbf{问题平均长度} & \;9.52 & \;9.69 & \;9.44 & \;9.53 & \;8.33 & \;8.01 & \;8.59 & \;8.31\\
+    \textbf{答案平均长度}\quad\quad & \;133.09 & \;134.13 & \;132.65 & \;133.16 & \;28.97 & \;24.89 & \;25.60 & \;26.48\\
 
     \bottomrule[0.7pt]
     \end{tabular}
