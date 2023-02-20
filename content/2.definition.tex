@@ -100,7 +100,7 @@ LCQMC是一份大规模的开放域中文问句复述匹配语料，其数据包
 其问句的特点呈现出较为简洁的特点，大多为用户向客服发起的提问。
 同样，本文也沿用前人公开的划分方式，将数据按一定比例划分为训练集，开发集和测试集。
 
-Quora是目前公开的最大的英文场景下的问句复述识别数据集，其来源于Quora\footnote{https://www.quora.com}（国外类似知乎的网站）。
+Quora是公开的英文场景下的问句复述识别数据集，其来源于Quora\footnote{https://www.quora.com}（国外类似知乎的网站）。
 Quora为QQP数据集提供了大约40万个问题对，每个问题对都由两个问句组成。
 这些问题对来自于Quora上用户提交的问题，以及从Quora网站上随机选择的问题，这样做的目的是为了尽可能地提高数据集的代表性。
 在标注数据时，Quora聘请了许多标注者，这些标注者会对每个问题对进行标注，将其标记为相似或不相似。
@@ -111,54 +111,70 @@ Quora为QQP数据集提供了大约40万个问题对，每个问题对都由两�
 \section{性能评价指标}
 \label{2.3 性能评价指标}
 
-本文采用平均化倒数排序（Mean Reciprocal Rank，简称MRR）和平均化精度均值（Mean Average Precision，简称MAP）两个排序指标衡量答案选择模型对候选答案的排序能力，
-并采用准确率（Accuracy，简称Acc）评估问题复述识别模型的二元分类能力。
-同时，本文使用显著性检验（Statistical Significance Testing）\cite{dror2018hitchhiker}指标P-value衡量模型的性能提升是否显著。
+对于答案选择任务，本文采用平均化倒数排序（Mean Reciprocal Rank，简称MRR）和平均化精度均值（Mean Average Precision，简称MAP）衡量模型在给定目标问题下对于候选答案的排序能力。
+而对于问句复述识别任务，我们采用准确率（Accuracy，简称Acc）和F$1$值（F$1$ Score）来衡量二分类模型精确度。
+此外，我们利用统计显著性检验（Statistical Significance Testing）\cite{dror2018hitchhiker}的指标P值（P-value）衡量我们提出的方法相较于基线模型的性能提升是否显著。
 本节将分别介绍上述评价指标。
-
-\subsection{平均化倒数排序MRR}
-
-MRR评价指标仅关注第一个相关答案的排名，取所在位置的倒数（Reciprocal Rank，简称RR）为值，对所有问题的$RR$求平均即为$MRR$。
-其计算公式如下：
-\begin{equation}
-    RR = \frac{1}{rank}
-\end{equation}
-\begin{equation}
-    MRR = \frac{1}{|Q|} \sum_{i=1}^{|Q|}RR_i
-\end{equation}
-其中，公式 2.1 中的$rank$表示与目标问题最相关的正解答案被模型排序后的位置，如果最相关的结果在第一条，则$rank$为1，即$RR$值为满分1。
-公式 2.2 中的$|Q|$表示数据集中问题的数量，$RR_i$表示问题集合$Q$中的第$i$个问题的倒数排序$RR$值。
 
 \subsection{平均化精度均值MAP}
 
-MAP评价指标考虑目标问题的所有正解候选答案排序后的排名，计算得到其精度均值（Average Precision，简称AP），对所有问题的$AP$求平均即为$MAP$。
-其计算公式如下：
+MAP评价指标考虑同一个目标问题下，将所有候选答案排序后，所有正解候选答案的排名，取其精度均值（Average Precision，简称AP）。
+而MAP则是对数据集中的所有问题的$AP$求平均值后的结果，公式如下：
 \begin{equation}
     AP = \frac{sum_{k=1}^{|A^+|}k/rank_k}{|A^+|}
 \end{equation}
 \begin{equation}
     MAP = \frac{1}{|Q|} \sum_{i=1}^{|Q|}AP_i
 \end{equation}
-其中，公式 2.3 中的$|A^+|$表示候选答案队列中正解的数量，$k$表示第$k$个正解，$rank_k$表示第$k$个正解在模型排序结果中的位置。
-公式 2.4 中的$|Q|$表示数据集中问题的数量，$AP_i$表示问题集合$Q$中的第$i$个问题的精度均值$AP$值。
+其中，$|A^+|$表示该问题下候选答案中正解回答的个数，$k$表示第$k$个正解，$rank_k$表示第$k$个正解在模型排序结果中的位置，$|Q|$表示数据中所有问题的集合，$AP_i$表示$Q$中的第$i$个问题的$AP$值。
+
+
+\subsection{平均化倒数排序MRR}
+
+不同于MAP指标，MRR评价指标仅关注第一个正解答案的排序位置，并取其倒数（Reciprocal Rank，简称RR），对所有问题的$RR$求平均即为$MRR$，公式如下：
+\begin{equation}
+    RR = \frac{1}{rank}
+\end{equation}
+\begin{equation}
+    MRR = \frac{1}{|Q|} \sum_{i=1}^{|Q|}RR_i
+\end{equation}
+其中，$rank$表示正解答案被模型排序后最靠前的位置。例如，如果正解出现在排序第一位，则$rank$为1，即$RR$值为满分1，若出现在排序第二位，则$rank$为2，即$RR$值为1/2。
+$|Q|$表示数据中所有问题的集合，$RR_i$表示$Q$中的第$i$个问题的$RR$值。
+
+
 
 \subsection{准确率Acc}
 
 准确率是最常见的分类评价指标，其计算公式为模型分类正确的样本数量除以总样本数量。
-通常来说，准确确率越高，分类模型能力越强。其计算公式如下：
+通常来说，准确确率越高，分类模型能力越强，公式如下：
 \begin{equation}
     ACC = \frac{TP + TN}{P + N}
 \end{equation}
-其中，$P$表示正例样本数量，$N$表示负例样本数量，$TP$和$TN$分别表示模型预测正确的正负例样本数量。
+其中，$P$表示样本中的正例数量，$N$表示样本中的负例数量，$TP$和$TN$分别表示模型预测正确的正负例样本数量。
 
 
-\subsection{显著性检验指标P-value}
+\subsection{F$1$值}
+F$1$值是在评估分类器或其他二元分类问题时的常用指标，其是精确率和召回率的调和平均数，表示分类器的准确性。
+F$1$值的范围在0到1之间，值越接近1，表示分类器的准确性越高，公式如下：
 
-显著性分析能够验证所提方法性能提升是否显著，确保实验结果并非偶然。
-本文采用Johnson\cite{johnson1999insignificance}建议的P-value阈值，将其设置为0.05，P-value小于阈值表示结果存在显著差异，否则差异不显著。
-显著性检验需要将优化前后模型的多次实验性能进行对比计算得到P-value值，本文的显著性检验均借助开源工具\footnote{https://github.com/rtmdrr/testSignificanceNLP}完成。
+\begin{equation}
+    F_1 = 2 * \frac{Precision * Recall}{Precision + Recall}
+\end{equation}
+
+其中，精确率（Precision）是指被分类器正确预测为正类别的样本数量（即TP）与所有被分类器预测为正类别的样本数量（TP + FP）之比。
+它衡量了分类器预测为正类别的样本中有多少是真正的正类别。
+召回率（Recall）是指被分类器正确预测为正类别的样本数量（即TP）与所有实际为正类别的样本数量（TP + FN）之比。
+它衡量了分类器正确预测出了多少正类别的样本。
+
+
+\subsection{统计显著性检验指标P-value}
+
+统计显著性分析根据概率分布和假设检验的方法，验证我们所提的方法相较于基线模型，其性能提升是否显著，避免实验的偶然性。
+本文采用Johnson\cite{johnson1999insignificance}建议，将t检验（Student's t test）的P-value阈值设置为0.05。
+如果P-value小于阈值表示结果存在显著差异，并非由偶然性和随机性导致，否则差异不显著。
+本文的显著性检验均借助开源工具\footnote{https://github.com/rtmdrr/testSignificanceNLP}完成。
 
 \section{本章小节}
 
-本章首先介绍了答案选择以及问题复述识别任务的定义，然后介绍了相关数据集的数据来源、构造方式及特点。
-最后，介绍了问答匹配领域中的常用评价指标，包括Acc、MRR、MAP以及显著性检验指标P-value值。
+本章首先介绍了问答匹配的两个子任务，答案选择以及问题复述识别任务的定义，然后介绍了实验所使用的数据集的数据资源。
+最后，介绍了问答匹配领域中的常用评价指标，包括MAP、MRR、ACC、F$1$以及显著性检验指标P-value值。
