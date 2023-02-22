@@ -147,7 +147,7 @@ Wei等人提出了一种简单数据增强策略EDA\cite{wei2019eda}在原样本
 尽管EDA策略实现简单，效率极高，但是这样的随机操作容易产生有着严重语法错误、语义偏移、甚至完全不可读等情况。
 将这样的样本加入训练数据，会导致模型训练过程有着极大的噪声，会导致其数据增强效果的下降。
 
-为了缓解上述的问题，Jin等人提出的TEXTFOOLER\cite{jin2020bert}方法利用外部知识库WordNet提供同义词列表进行替换，再使用通用句子编码模型（Universal Sentence Encoder，简称USE）\cite{cer2018universal}监测替换后的句子和原句是否有较大的语义偏移，若有，则舍弃该样本。
+为了缓解上述的问题，Jin等人提出的TEXTFOOLER\cite{jin2020bert}方法利用外部知识库WordNet\cite{miller1995wordnet}提供同义词列表进行替换，再使用通用句子编码模型（Universal Sentence Encoder，简称USE）\cite{cer2018universal}监测替换后的句子和原句是否有较大的语义偏移，若有，则舍弃该样本。
 同样基于WordNet的同义词替换策略，PWWS方法\cite{ren-etal-2019-generating}则提出了一种概率加权的词显着性方法来确定词替换顺序。
 而Li等人提出的BERT-ATTACK\cite{li2020bert}方法，为了能够缓解同义词替换带来的不自然和语法错误的问题，利用语言模型的掩码预测任务（Masked Language Model，简称MLM）代替同义词替换，即将需要替换的词遮蔽，使用MLM任务生成该位置的候选词。
 

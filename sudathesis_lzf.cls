@@ -57,17 +57,24 @@ The LaTeX template for thesis of suda]
 % 直接设置反而会在只有adobefonts的情况下报错
 \setCJKmainfont{SimSun}
 
+
+
 % 斜楷体
 \setCJKfamilyfont{hwxingkai}{STXingkai}
 \newcommand{\hwxingkai}{\CJKfamily{hwxingkai}}
+%  % windows 楷体
+% %\setCJKfamilyfont{kai}{KaiTi_GB2312}
+% % \setCJKfamilyfont{kai}{KaiTi}
+% \setCJKfamilyfont{kai}{KaiTi}
+
+% \newcommand{\kai}{\CJKfamily{kai}}
+% %windows 宋体
+% \setCJKfamilyfont{song}{SimSun}
+% \newcommand\song{\CJKfamily{song}}
 
 % 楷体
-% mac
 \setCJKfamilyfont{zhkai}{KaiTi}
 \newcommand{\kai}{\CJKfamily{zhkai}}
-%win
-% \setCJKfamilyfont{zhkai}{SimKai}
-% \newcommand{\kai}{\CJKfamily{zhkai}}
 
 % 黑体
 \setCJKfamilyfont{zhhei}{SimHei}
@@ -78,6 +85,8 @@ The LaTeX template for thesis of suda]
 \newcommand\song{\CJKfamily{zhsong}}
 
 \setCJKfamilyfont{zhsong}{SimSun}[AutoFakeBold, AutoFakeSlant]
+
+
 \newcommand{\xiaochuhao}{\fontsize{32pt}{\baselineskip}\selectfont}
 \newcommand{\xiaoer}{\fontsize{18pt}{27pt}\selectfont}          % 小二, 1.5行距
 \newcommand{\sihao}{\fontsize{14pt}{21pt}\selectfont}            % 四号, 1.5 倍行距
@@ -243,14 +252,14 @@ The LaTeX template for thesis of suda]
 \else
     \hypersetup{hidelinks}
 \fi
-% \hypersetup{
-%     bookmarksnumbered,
-%     bookmarksopen,
-%     % pdftitle={SUDA thesis},
-%     pdfauthor={JZL},
-%     pdfsubject={苏州大学硕士学位论文},
-%     pdfcreator={LaTeXed~By~JZL}
-% }
+\hypersetup{
+    bookmarksnumbered,
+    bookmarksopen,
+    pdftitle={SUDA thesis},
+    pdfauthor={YANGYAOSHENG},
+    pdfsubject={苏州大学硕士学位论文},
+    pdfcreator={LaTeXed~By~YANGYAOSHENG}
+}
 
 %%%%%%%%%% reference %%%%%%%%%%
 % 参考文献
@@ -258,7 +267,7 @@ The LaTeX template for thesis of suda]
 \bibliographystyle{sudathesis} % 参考文献格式
 \RequirePackage[sort&compress]{natbib}
 \bibpunct{[}{]}{,}{s}{,}{\textsuperscript{,}}
-\setlength{\bibsep}{5pt}
+\setlength{\bibsep}{0pt}
 \renewcommand{\citep}[1]{(\citet{#1})}
 
 %%%%%%%%%% table %%%%%%%%%%
@@ -311,7 +320,7 @@ The LaTeX template for thesis of suda]
 \DeclareGraphicsExtensions{.eps,.ps,.jpg,.bmp}
 \graphicspath{{figures/}}
 \RequirePackage{pifont} % “秘级”后的五角星
-% \RequirePackage{subcaption}
+\RequirePackage{subcaption}
 
 %%%%%%%%%% list %%%%%%%%%%
 % 列表
@@ -507,16 +516,16 @@ The LaTeX template for thesis of suda]
             \centerline{\zihao{0}\songti 硕士学位论文}
             \vskip 10bp
             \centerline{\zihao{2}\songti （专业学位）}
-            \includegraphics[width=130pt]{sudamark.png}
+            \includegraphics[width=130pt]{sudamark.jpg}
             ~~\\
             \vskip 20bp
 
-            \begin{tabular}{p{0.5cm}p{9.2cm}}
-                &\dlmu[9.2cm]{\zihao{4}\heiti{基于数据增强和问句意图强化的}}\\ %[.4ex]%\hline
-                &\dlmu[9.2cm]{\zihao{4}\heiti{问答文本匹配方法研究}} \\
+            \begin{tabular}{p{0.5cm}p{10cm}}
+                &\dlmu[10cm]{\zihao{4}\heiti{\suda@thesistitle}}\\ %[.4ex]%\hline
+                &\dlmu[10cm]{} \\
                 % english title 需要手动输入
-                &\dlmu[9.2cm]{\zihao{4}{Fine-grained Semantic Perception and Robust}} \\%[.4ex]
-                &\dlmu[9.2cm]{\zihao{4}{Diagnosis Based Question Answer Matching}} \\%[.4ex]
+                &\dlmu[10cm]{\zihao{4}{Research on External Knowledge Fusion for}} \\%[.4ex]
+                &\dlmu[10cm]{\zihao{4}{Commonsense Question Answering}} \\%[.4ex]
             \end{tabular}
             \vskip 20bp
             ~~\\
@@ -584,9 +593,9 @@ The LaTeX template for thesis of suda]
 \newenvironment{cabstract}{%
     \newpage
     \chapter*{\zihao{-2}{\suda@thesistitle}\\
-    \vspace{0.5ex}
+    \vspace{2ex}
     \centerline{\heiti\zihao{-3}{摘~~~~要}}}
-    \vspace{-1ex}
+    %\vspace{5ex}
     \setlength{\parindent}{24bp}
     }{%
     %\vskip 21bp
@@ -597,10 +606,9 @@ The LaTeX template for thesis of suda]
 % 英文摘要
 \newenvironment{eabstract}{%
     \newpage
-    \chapter*{\zihao{-2}{Fine-grained Semantic Perception and Robust Diagnosis \\ Based Question Answer Matching}\\
-    \vspace{0.5ex}
+    \chapter*{\zihao{-2}{Research on External Knowledge Fusion for Commonsense Question Answering}\\
+    \vspace{2ex}
     \centerline{\zihao{-3}{Abstract}}}
-    \vspace{-1ex}
     \setlength{\parindent}{24bp}
     }{%
     %\vskip 21bp
